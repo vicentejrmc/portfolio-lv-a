@@ -1,2 +1,57 @@
 @use 'bootstrap';
 @use 'bootstrap-icons';
+
+$cor-principal: rgb(4, 22, 0);
+$cor-secundaria: rgb(29, 102, 0);
+$cor-neutra: rgb(241, 241, 205);
+$secao-box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, .15);
+$background-gradient-1: linear-gradient(90deg,rgb(38, 197, 6) 18%, rgb(155, 187, 39) 94%);
+$background-gradient-2: linear-gradient(157deg,rgb(38, 197, 6) 18%, rgb(155, 187, 39) 67%);
+
+#banner {
+    background: $cor-principal;
+    box-shadow: $secao-box-shadow;
+}
+
+#banner .banner-text {
+    background: $background-gradient-1;
+    background-clip: text;
+    color: transparent;
+}
+
+#banner .bg-foto {
+    background: $background-gradient-2;
+    border-radius: 33% 67% 53% 47% / 66% 41% 59% 34%;
+    height: 20rem;
+    overflow: hidden;
+    width: 20rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+section{
+  display: flex;
+  min-height: 100vh;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.app-background-secundario{
+  background-color: $cor-secundaria;
+}
+
+.app-btn-principal{
+  background-color: $cor-secundaria;
+  padding: 5px;
+  border-radius: 5px;
+  color: $cor-neutra;
+  font-weight: 550;
+
+  &:hover{
+    background-color: $cor-neutra;
+    color: $cor-secundaria;
+  }
+}
+
