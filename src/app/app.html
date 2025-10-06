@@ -108,15 +108,14 @@
   </div>
 </section>
 
+<!-- Portifolio -->
 <section id="app-banner">
-  <div id="portifolio" class="container d-flex flex-column my-auto mt-5">
+  <div id="portifolio" class="container d-flex flex-column my-auto mt-5 mb-5">
     <span class="display-5 fw-bold text-center">Portifólio</span>
 
     <p class="fs-5 mt-5">
-      Nesta seção, apresento os projetos dos quais participei e que refletem minha experiência e
-      habilidades como desenvolvedor. Ao clicar em cada card, um modal será exibido, proporcionando
-      uma visualização detalhada do funcionamento de cada projeto. Cada trabalho representou uma
-      oportunidade de aprendizado e inovação!
+        Nesta seção, apresento alguns projetos dos quais participei no processo de desenvolvimento. Cada projeto reflete uma diferente fase do meu aprendizado e das minhas habilidades como desenvolvedor!
+        Ao clicar no botão "Ver projeto", um modal será exibido, proporcionando uma breve visualização do funcionamento de cada projeto. Se desejar ver como o projeto esta estruturado, o botão "Repositório" direcionara você até a página do repositoio no Github.
     </p>
 
     <div class="row justify-content-center g-3 mt-5">
@@ -139,7 +138,7 @@
               <div class="d-flex gap-2 mt-auto">
                 <button
                   type="button"
-                  (click)="itemPortfolioSelecionado = item"
+                  (click)="itemPortfolioSelecionado =  item"
                   class="btn px-4 app-btn-principal"
                   data-bs-toggle="modal"
                   data-bs-target="#portfolioModal"
@@ -166,50 +165,83 @@
   </div>
 </section>
 
+<!-- Modal -->
 <div
   class="modal fade"
   id="portfolioModal"
   tabindex="-1"
   aria-labelledby="portfolioModalLabel"
   aria-hidden="true"
->
+  >
+
   <div class="modal-dialog modal-md">
-    <div class="modal-content bg-dark text-white rounded-4">
-      <div class="modal-header">
-        <h5 class="modal-title" id="portfolioModalLabel">{{ itemPortfolioSelecionado?.titulo }}</h5>
-        <button
-          type="button"
-          class="btn-close btn-close-white"
-          data-bs-dismiss="modal"
-          aria-label="Fechar"
-        ></button>
-      </div>
-      <div class="modal-body text-center rounded-bottom-4 modal-body-customizado">
-        <img
-          id="portfolioModalImage"
-          [src]="itemPortfolioSelecionado?.urlImagem"
-          alt="Imagem do Projeto"
-          class="img-fluid mb-3"
-        />
+      <div class="modal-content bg-dark text-white rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title" id="portfolioModalLabel">{{ itemPortfolioSelecionado?.titulo }}</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="modal"
+            aria-label="Fechar"
+          ></button>
+        </div>
+        <div class="modal-body text-center rounded-bottom-4 modal-body-customizado">
+          <img
+            id="portfolioModalImage"
+            [src]="itemPortfolioSelecionado?.urlImagem"
+            alt="Imagem do Projeto"
+            class="img-fluid mb-3"
+          />
 
-        <span id="stackCard" class="d-flex justify-content-center gap-1 mb-2">
-          @for (itemStack of itemPortfolioSelecionado?.stack; track $index) {
-            <img [src]="itemStack" width="35px;" />
-          }
-        </span>
+          <span id="stackCard" class="d-flex justify-content-center gap-1 mb-2">
+            @for (itemStack of itemPortfolioSelecionado?.stack; track $index) {
+              <img [src]="itemStack" width="35px;" />
+            }
+          </span>
 
-        <p>{{ itemPortfolioSelecionado?.descricao }}</p>
+          <p>{{ itemPortfolioSelecionado?.descricao }}</p>
 
-        <a
-          id="urlRepositorio"
-          [href]="itemPortfolioSelecionado?.urlRepositorio"
-          target="_blank"
-          class="btn btn-outline-light"
-        >
-          <i class="bi bi-github"></i>
-          Repositório
-        </a>
+          <a
+            id="urlRepositorio"
+            [href]="itemPortfolioSelecionado?.urlRepositorio"
+            target="_blank"
+            class="btn btn-outline-light"
+          >
+            <i class="bi bi-github"></i>
+            Repositório
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 </div>
+
+<section id="contato" class="flex-column text-center">
+  <div class="container my-auto">
+    <span class="text-white fw-bold display-5 text-center">Contato</span>
+
+    <div class="d-flex justify-content-center align-items-center mt-5 fs-5">
+      <i class="bi bi-telephone"></i>
+      <span class="text-white ps-2">(77) 98141-3593</span>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center mt-3 fs-5">
+      <i class="bi bi-envelope-at"></i>
+      <span class="text-white ps-2">vicente_pc@outlook.com</span>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center mt-3 fs-5">
+      <i class="bi bi-pin-map"></i>
+      <span class="text-white ps-2">Vitória da Conquista - BA - Brasil</span>
+    </div>
+
+    <div class="d-flex justify-content-center mt-5">
+      <a target="_blank" href="https://github.com/vicentejrmc">
+        <img alt="Github logo" src="github.png" />
+      </a>
+
+      <a target="_blank" href="">
+        <img alt="Linkedin logo" src="linkedin.png" />
+      </a>
+    </div>
+  </div>
+</section>
