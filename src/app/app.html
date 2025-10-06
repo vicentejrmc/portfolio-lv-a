@@ -29,29 +29,64 @@
   </div>
 </nav>
 
-<section id="banner" class="rounded-1 p-3 app-section-1">
+<section id="app-banner" class="rounded-1 p-3">
     <div class="container">
         <div class="row align-items-center">
             <h3 class="fs-2 mb-1 text-white mb-4">Olá, eu sou <strong>Luiz Vicente!</strong></h3>
-            <div class="col-lg-6 col-md-8 order-0 order-lg-1 bg-foto mx-auto mb-1 pt-2">
+            <div class="col-lg-6 col-md-8 order-0 order-lg-1 bg-foto mx-auto mb-2 pt-2">
             <img class="img-fluid mt-4" src="fotoLuizVicente.png" alt="Foto Luiz Vicente">
         </div>
           <div class="col-lg-8 col-md-12" >
-            <div class="textContent">
-                  <p class="fs-5 mt-2 fw-semibold  text-white">
-                    Desenvolvedor em constante aprendizado!<br>
-                    Tenho me empenhado constantemente
-                    à aprender e aperfeiçoar técnicas
-                    que me tornem um profissional capacitado, tentando me manter sempre atualizado com o que há de mais moderno no que se diz respeito ao Desenvolvimento de Aplicações Web.<br>
-                    Atualmente tenho desenvolvido soluções com a finalidade de aprender e evoluir na plataforma .Net C#.
-                    criando alicações MVC, WebApi e Angular.<br>
-                    Na sessão de <a href="#portifolio"><span class="banner-text">Portifólio</span></a> poderá ver alguns projetos nos quais participei. cada um representa uma fase de meu aprendizado!
-                  </p>
+              <div class="textContent">
+                  <span class="fs-2 fw-bold banner-text">"Desenvolvedor .Net C# Full-Stack"</span>
               </div>
               <div class="d-flex align-items-center mt-3 gap-3">
                   <a class="app-btn-principal" href="#contato">Contate-me!</a>
+                  <a target="_blank" href="https://github.com/vicentejrmc">
+                      <img alt="Github logo" src="github.png" />
+                  </a>
+                  <a target="_blank" href="">
+                      <img alt="Linkedin logo" src="linkedin.png" />
+                  </a>
               </div>
           </div>
         </div>
     </div>
 </section>
+
+<section id="sobre" class="container">
+  <div class="fs-5 my-auto">
+      <h2 class="display-5 mb-5 mt-5 fw-semibold text-center">Sobre mim</h2>
+      <p class="mt-2 text-white">
+        Desenvolvedor em constante aprendizado!<br>
+        Tenho me empenhado constantemente
+        à aprender e aperfeiçoar técnicas
+        que me tornem um profissional capacitado, tentando me manter sempre atualizado com o que há de mais moderno no que se diz respeito ao Desenvolvimento de Aplicações Web.<br>
+        Atualmente tenho desenvolvido soluções com a finalidade de aprender e evoluir na plataforma .Net C#.
+        criando alicações MVC, WebApi e Angular.<br>
+        Na sessão de <a href="#portifolio"><span class="app-banner-text">Portifólio</span></a> poderá ver alguns projetos nos quais participei. cada um representa uma fase de meu aprendizado!
+      </p>
+  </div>
+</section>
+
+<section id="app-banner" class="container-fluid d-flex justify-content-center align-items-center">
+  <div class="fs-5 my-auto">
+    <h3 id="habilidades" class="display-5 mb-5 mt-5 fw-semibold text-center">Habilidades</h3>
+
+    <div class="row row-cols-1 row-cols-lg-2 g-5 mt-5 mx-2">
+      @for(item of itensHabilidades; track $index){
+        <div class="d-flex align-items-center gap-4">
+            <span>
+              <i class="bi {{ item.icone}} fs-1"></i>
+            </span>
+            <div class="d-flex flex-column">
+                <label class="fs-4 fw-semibold">{{item.titulo}}</label>
+
+                <small class="fs-5">{{item.descricao}}</small>
+            </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+

@@ -8,18 +8,18 @@ $secao-box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, .15);
 $background-gradient-1: linear-gradient(90deg,rgb(38, 197, 6) 18%, rgb(155, 187, 39) 94%);
 $background-gradient-2: linear-gradient(157deg,rgb(38, 197, 6) 18%, rgb(155, 187, 39) 67%);
 
-#banner {
+#app-banner {
     background: $cor-principal;
     box-shadow: $secao-box-shadow;
 }
 
-#banner .banner-text {
+#app-banner .app-banner-text {
     background: $background-gradient-1;
     background-clip: text;
     color: transparent;
 }
 
-#banner .bg-foto {
+#app-banner .bg-foto {
     background: $background-gradient-2;
     border-radius: 33% 67% 53% 47% / 66% 41% 59% 34%;
     height: 20rem;
@@ -33,9 +33,7 @@ a{
 
 section{
   display: flex;
-  min-height: 100vh;
   margin-top: auto;
-  margin-bottom: auto;
 }
 
 .app-background-secundario{
