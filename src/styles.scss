@@ -11,6 +11,7 @@ $background-gradient-2: linear-gradient(157deg,rgb(38, 197, 6) 18%, rgb(155, 187
 #app-banner {
     background: $cor-principal;
     box-shadow: $secao-box-shadow;
+    margin-bottom: 5px;
 }
 
 #app-banner .app-banner-text {
