@@ -29,14 +29,14 @@
             ],
             "styles": ["src/styles.scss"],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
-            "outputPath": "/dist/"
+            "outputPath": "dist/portifolio-lv-a"
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
+                  "maximumWarning": "600kB",
                   "maximumError": "1MB"
                 },
                 {
@@ -66,6 +66,15 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref":"https://vicentejrmc.github.io/portfolio-lv-a/",
+            "repo":"https://github.com/vicentejrmc/portfolio-lv-a",
+            "name":"Vicente-Jrmc",
+            "email":"vicente_pc@outlook.com"
+          }
         },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
