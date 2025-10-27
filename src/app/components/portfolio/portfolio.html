@@ -1,45 +1,49 @@
-<!-- Portifolio -->
+<!-- Portfólio -->
 <section class="app-banner">
   <div id="portifolio" class="container d-flex flex-column my-auto mt-5 mb-5">
     <span class="display-5 fw-bold text-center">Portfólio</span>
 
-    <p class="fs-5 mt-5">
+    <p class="fs-5 mt-5 text-center">
       Nesta seção, apresento alguns projetos dos quais participei no processo de desenvolvimento.
       Cada projeto reflete uma diferente fase do meu aprendizado e das minhas habilidades como
       desenvolvedor!
     </p>
 
-    <div class="row justify-content-center g-3 mt-5">
+    <div class="row justify-content-center g-4 mt-5">
       @for (item of itensPortfolio; track $index) {
-        <div class="col-lg-4 col-md-8 col-sm-12">
-          <div class="card rounded-4 h-100">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card rounded-4 h-100 shadow-sm">
             <img
-              id="imgCard"
               class="card-img-top rounded-top-4"
-              style="max-height: 250px"
               [src]="item.urlImagem"
+              alt="Imagem do projeto"
+              style="max-height: 250px; object-fit: cover;"
             />
-            <div class="card-body d-flex flex-column gap-2 h-100">
-              <span id="stackCard" class="d-flex gap-1">
+            <div class="card-body d-flex flex-column gap-3 h-100">
+              <div
+                class="d-flex flex-wrap justify-content-center gap-2"
+                style="overflow-x: auto;"
+              >
                 @for (itemStack of item.stack; track $index) {
-                  <img [src]="itemStack" width="35px;" />
+                  <img [src]="itemStack" class="skill-icon" />
                 }
-              </span>
-              <h5 id="tituloCard" class="card-title mt-2">{{ item.titulo }}</h5>
-              <div class="d-flex gap-2 mt-auto">
+              </div>
+
+              <h5 class="card-title text-center mt-2">{{ item.titulo }}</h5>
+
+              <div class="d-flex justify-content-center gap-2 mt-auto flex-wrap">
                 <button
                   type="button"
                   (click)="itemPortfolioSelecionado = item"
                   class="btn px-4 app-btn-principal"
                   data-bs-toggle="modal"
                   data-bs-target="#portfolioModal"
-                  id="btnVerProjeto"
                 >
                   <i class="bi bi-window-plus"></i>
                   Ver projeto
                 </button>
+
                 <a
-                  id="urlRepositorio"
                   [href]="item.urlRepositorio"
                   target="_blank"
                   class="btn btn-outline-light"
@@ -55,6 +59,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Modal -->
 <div
@@ -89,7 +94,7 @@
           }
         </span>
 
-        <p>{{ itemPortfolioSelecionado?.descricao }}</p>
+        <p>{{ itemPortfolioSelecionado?.descricao}}</p>
 
         <a
           id="urlRepositorio"
@@ -100,6 +105,17 @@
           <i class="bi bi-github"></i>
           Repositório
         </a>
+
+        @if (itemPortfolioSelecionado?.titulo === 'Gerenciador-de-filmes') {
+          <a
+            href="https://vicentejrmc.github.io/gerenciador-de-filmes/inicio"
+            target="_blank"
+            class="btn btn-outline-light ms-2"
+          >
+            <i class="bi bi-box-arrow-up-right"></i>
+            Ver Site
+          </a>
+        }
       </div>
     </div>
   </div>

@@ -5,4 +5,5 @@ export interface ItemPortifolio {
   urlGif: string;
   urlRepositorio: string;
   stack: string[];
+  link?: string;
 }

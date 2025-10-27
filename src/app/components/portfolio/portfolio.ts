@@ -56,6 +56,27 @@ export class Portfolio {
         'O Sistema Controle de bar tem como objetivo de auxiliar de forma simples o gerenciamento do atendimento ao cliente. Com uma Inteface amigável e intuitiva, o sistema é ideal para estabelecimentos de pequeno porte. Por meio dele é possível realizar o Controle de vendas gerenciando os pedidos, Cadastro de produtos, Garsons e Mesas.',
       urlRepositorio: 'https://github.com/vicentejrmc/Controle-de-bar2025',
     },
+
+      {
+      titulo: 'Gerenciador-de-filmes',
+      urlImagem: 'gerenciador-de-filmes.png',
+      urlGif: 'https://i.imgur.com/elGY7wd.gif',
+      stack: [
+        'https://skillicons.dev/icons?i=html&theme=light',
+        'https://skillicons.dev/icons?i=css&theme=light',
+        'https://skillicons.dev/icons?i=scss&theme=dark',
+        'https://skillicons.dev/icons?i=bootstrap&theme=light',
+        'https://skillicons.dev/icons?i=ts&theme=dark',
+        'https://skillicons.dev/icons?i=angular&theme=dark',
+        'https://skillicons.dev/icons?i=rxjs&theme=dark',
+        'https://skillicons.dev/icons?i=vscode&theme=dark',
+
+
+      ],
+      descricao:
+        'O Gerenciador-de-filmes é um site que tem o objetivo de compartilhar informações e avaliações sobre filmes e series - desenvolvido como forma de apredizado, apresenta uma inteface intuítiva e de fácil entendimento. o site consome a mesma Api do site Tmdb, que foi usado como inspiração para o desenvolvimento dele. Link do site no ghpages: https://vicentejrmc.github.io/gerenciador-de-filmes/inicio (site está em processo de melhorias, e novas funcionalidade que serão implementadas porsteriormente)',
+      urlRepositorio: 'https://github.com/vicentejrmc/gerenciador-de-filmes',
+    },
   ];
 
   public itemPortfolioSelecionado?: ItemPortifolio;

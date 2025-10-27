@@ -55,3 +55,16 @@ section {
     color: $cor-secundaria;
   }
 }
+
+.skill-icons-container {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.skill-icon {
+  width: 35px;
+  height: auto;
+  flex-shrink: 0;
+}
+
